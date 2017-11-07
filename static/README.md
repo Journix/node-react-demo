@@ -18,12 +18,13 @@
 - css-loader: 将编译好的css传递给下一步骤
 - style-loader: 将最终样式引入到生成的代码中
 - url-loader: Loads files as `base64` encoded URL
-- file-loader: 解析项目中的url，使之指向正确的地址
+- file-loader: 解析项目中的url，使之指向正确的地址，一般与url-loader成对出现，如果不添加，npm install 的时候会出现 warning
 - http-server: 基于nodejs的http服务器
 - open: Open a file or url in the user's preferred application.
 - webpack-dev-server: 一个小型的node.js Express服务器
 - minimist: 轻量级的命令行参数解析引擎, 支持IE9及以上
 - redux-devtools-extension: redux 可视化工具，搭配chrome插件redux-devtools使用
+- redux-logger: redux 日志工具
 - html-webpack-plugin: 生成html文件
 
 #### dependencies
