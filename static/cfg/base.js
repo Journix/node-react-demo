@@ -15,8 +15,9 @@ module.exports = {
   debug: true,
   devtool: 'eval',
   output: {
-    path: path.join(__dirname, '/../dist/assets'),
-    filename: 'app.js',
+    // path: path.join(__dirname, '/../dist/assets'),
+    path: path.join(__dirname, '/../build'),
+    filename: 'bundle.js',
     publicPath: defaultSettings.publicPath
   },
   devServer: {
@@ -56,7 +57,7 @@ module.exports = {
       'test': /\.js$/,
       'exclude': /node_modules/,
       'query': {
-        'plugins': ['recharts'],
+        // 'plugins': ['recharts'],
         'presets': ['es2015']
       }
     }]
