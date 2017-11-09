@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "node-react-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,6 +36,9 @@
   "scripts": {
     "start": "webpack --config webpack.config.js",
     "dev": "webpack --watch --config webpack.config.js",
-    "local": "node server.js --env=local"
+    "server:local": "node server.js --env=local",
+    "server:dist": "node server.js --env=dist",
+    "server:dev": "node server.js --env=dev"
+
   }
 }
