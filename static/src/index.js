@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -59,13 +60,15 @@ const Inbox = ({ match }) => (
 )
 
 ReactDOM.render(
-  (<HashRouter>
-    <App>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/inbox" component={Inbox} />
-    </App>
-  </HashRouter>),
+  <Provider store={store}>
+    <HashRouter>
+      <App>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/inbox" component={Inbox} />
+      </App>
+    </HashRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
