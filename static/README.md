@@ -33,6 +33,7 @@
 - react-router-dom: react-router核心依赖
 - redux: redux 核心库
 - react-redux: react 专用 redux 库
+- redux-thunk: 使 redux dispatch 能接收函数参数
 - react-router-redux: router 与 redux 的连接器
 - classnames: 快速生成react className
 - lodash: 工具库
