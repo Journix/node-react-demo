@@ -22,28 +22,28 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                query: {
-                    "plugins": [
-                        // ["transform-runtime", {
-                        //     "helpers": false,
-                        //     "polyfill": false,
-                        //     "regenerator": true,
-                        //     "moduleName": "babel-runtime"
-                        // }],
-                        // "transform-es3-property-literals",
-                        // "transform-es3-member-expression-literals"
-                    ],
-                    "presets": [
-                        ["es2015",
-                            {
-                                "loose": true,
-                                "modules": false
-                            }
-                        ],
-                        "react",
-                        "stage-0"
-                    ]
-                }
+                // query: {
+                //     "plugins": [
+                //         // ["transform-runtime", {
+                //         //     "helpers": false,
+                //         //     "polyfill": false,
+                //         //     "regenerator": true,
+                //         //     "moduleName": "babel-runtime"
+                //         // }],
+                //         // "transform-es3-property-literals",
+                //         // "transform-es3-member-expression-literals"
+                //     ],
+                //     "presets": [
+                //         ["es2015",
+                //             {
+                //                 "loose": true,
+                //                 "modules": false
+                //             }
+                //         ],
+                //         "react",
+                //         "stage-0"
+                //     ]
+                // }
             },{
                 test: /\.css$/,
                 loader: "style!css"

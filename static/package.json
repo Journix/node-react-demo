@@ -35,6 +35,8 @@
   },
   "scripts": {
     "start": "webpack --config webpack.config.js",
+    "build:render":"webpack --env=render",
+    "build:local":"webpack --env=local",
     "dev": "webpack --watch --config webpack.config.js",
     "server:local": "node server.js --env=local",
     "server:dist": "node server.js --env=dist",

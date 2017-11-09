@@ -6,7 +6,7 @@ let webpack = require('webpack');
 let baseConfig = require('./dev');
 
 // Add needed plugins here
-let BowerWebpackPlugin = require('bower-webpack-plugin');
+// let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../server.render.js'),
