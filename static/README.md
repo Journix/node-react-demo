@@ -38,4 +38,28 @@
 - classnames: 快速生成react className
 - lodash: 工具库
 
+### script
+
+## webpack config
+
+### entry
+- 是字符串时，定义入口文件；
+- 是数组时，包含入口文件，另一个参数可以是用来配置 webpack 提供的一个静态资源服务器，webpack-dev-server。webpack-dev-server会监控项目中每一个文件的变化，实时的进行构建，并且自动刷新页面。
+- 是对象时，多入口文件。
+
+### output
+- 参数为对象，定义构建后的文件输出。当在entry中定义多文件时，filename 可以对应的更改为 [name].js 用于定义不同文件构建后的名字。
+
+### module
+
+### resolve
+- extension: 配置自动补全文件后缀
+
+### plugins
+- webpack.NoErrorsPlugin(): 跳过编译时出错的代码并记录，使编译后运行时的包不会发生错误
+- extract-text-webpack-plugin: 把 css 从 bundle 中独立出来。
+
+### externals
+- 在 require 类库时，不想被打包，在这里配置。
+
 

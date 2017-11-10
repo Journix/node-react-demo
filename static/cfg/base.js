@@ -47,7 +47,6 @@ module.exports = {
       styles: `${defaultSettings.srcPath}/styles/`,
       config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
       utils: `${defaultSettings.srcPath}/utils/`,
-      map: `${defaultSettings.srcPath}/constants/FlightMap`,
       log: `${defaultSettings.srcPath}/log/`
     }
   },
