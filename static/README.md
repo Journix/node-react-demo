@@ -51,6 +51,9 @@
 - 参数为对象，定义构建后的文件输出。当在entry中定义多文件时，filename 可以对应的更改为 [name].js 用于定义不同文件构建后的名字。
 
 ### module
+- loader
+    - js :
+    - css : style-loader!css-loader
 
 ### resolve
 - extension: 配置自动补全文件后缀
