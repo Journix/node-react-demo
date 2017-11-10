@@ -11,6 +11,7 @@ module.exports = merge(baseWebpackConfig, {
         path: path.resolve(__dirname, '../dist'),
     },
     plugins: [
-        new CleanWebpackPlugin(['../dist'], { allowExternal: true })
+        new webpack.optimize.UglifyJsPlugin(),
+        new CleanWebpackPlugin(['../dist/*'], { allowExternal: true })
     ]
 });

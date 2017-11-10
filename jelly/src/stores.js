@@ -6,7 +6,7 @@ import createHistory from 'history/createBrowserHistory';
 const history = createHistory();
 
 import { composeWithDevTools } from 'redux-devtools-extension';
-import createLogger from 'redux-logger'
+import { createLogger } from 'redux-logger'
 
 import rootReducers from './reducers';
 
