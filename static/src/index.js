@@ -7,6 +7,7 @@ import Index from './pages/index/index';
 import List from './pages/list/list';
 import registerServiceWorker from './registerServiceWorker';
 
+import store from './stores'
 
 import { HashRouter, Route, Link, Switch } from 'react-router-dom';
 

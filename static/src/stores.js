@@ -8,7 +8,7 @@ const history = createHistory();
 import { composeWithDevTools } from 'redux-devtools-extension';
 import createLogger from 'redux-logger'
 
-import rootReducers from '../reducers';
+import rootReducers from './reducers';
 
 const reducers = combineReducers(Object.assign(rootReducers, { router: routerReducer })) ;
 //window.STATE_FROM_SERVER接收服务端初始状态
