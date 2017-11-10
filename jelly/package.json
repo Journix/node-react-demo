@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node build/dev-server.js",
     "dev": "node build/dev-server.js",
-    "build": "webpack --config build/webpack.js",
+    "build": "webpack --config build/webpack.prd.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -38,7 +38,8 @@
     "redux-logger": "^3.0.6",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1"
   },
   "author": "",
   "license": "ISC"
