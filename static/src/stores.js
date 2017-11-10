@@ -1,6 +1,6 @@
  import { routerReducer, routerMiddleware } from 'react-router-redux';  //ConnectedRouter as Router,
 import { createStore, applyMiddleware, combineReducers } from 'redux'
-// import thunk from 'redux-thunk'
+import thunk from 'redux-thunk'
 
 import createHistory from 'history/createBrowserHistory';
 const history = createHistory();
@@ -14,10 +14,10 @@ const reducers = combineReducers(Object.assign(rootReducers, { router: routerRed
 //window.STATE_FROM_SERVER接收服务端初始状态
 // export default createStore(reducer, window.STATE_FROM_SERVER) //不使用中间件的情况
 
-// const middleware = [ thunk, routerMiddleware(history) ]
-// if (process.env.NODE_ENV !== 'production') {
-//   middleware.push(createLogger({collapsed:true}))
-// }
+const middleware = [ thunk, routerMiddleware(history) ]
+if (process.env.NODE_ENV !== 'production') {
+  middleware.push(createLogger({collapsed:true}))
+}
 
 export default createStore(
   reducers,
