@@ -30,7 +30,6 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({ template: './public/index.html' })
     ]
 };
