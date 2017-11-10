@@ -21,5 +21,5 @@ const reducers = combineReducers(Object.assign(rootReducers, { router: routerRed
 
 export default createStore(
   reducers,
-  composeWithDevTools( applyMiddleware(...middleware) )
+  // composeWithDevTools( applyMiddleware(...middleware) )
 )
