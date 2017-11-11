@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node build/dev-server.js",
-    "dev": "node build/dev-server.js",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
     "build": "set NODE_ENV='production' && webpack --config build/webpack.prd.conf.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
