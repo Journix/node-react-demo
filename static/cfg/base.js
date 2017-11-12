@@ -15,13 +15,12 @@ module.exports = {
   debug: true,
   devtool: 'eval',
   output: {
-    // path: path.join(__dirname, '/../dist/assets'),
     path: path.join(__dirname, '/../build'),
     filename: 'bundle.js',
     publicPath: defaultSettings.publicPath
   },
   devServer: {
-    contentBase: './src/',
+    contentBase: './build/',
     historyApiFallback: true,   //"start": "webpack-dev-server --inline --content-base . --history-api-fallback"
     hot: true,
     port: defaultSettings.port,
