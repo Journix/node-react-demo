@@ -3,7 +3,8 @@
 const path = require('path');
 const args = require('minimist')(process.argv.slice(2));
 
-process.env.REACT_WEBPACK_ENV = args.env || "dist";
+let env = args.env || "dist";
+process.env.REACT_WEBPACK_ENV = env;
 
 /**
  * Build the webpack configuration
