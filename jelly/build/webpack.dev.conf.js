@@ -1,8 +1,36 @@
+const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base.conf');
-const merge = require('webpack-merge')
+const merge = require('webpack-merge');
 
 
-module.exports = merge(baseWebpackConfig, {
-    devtool: 'inline-source-map'
+const devWebpackConfig = merge(baseWebpackConfig, {
+    output: {
+        filename: '[name].[hash].js',
+        path: path.resolve(__dirname, '../dist'),
+        publicPath:'/'
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+        hot: true,
+        port:8080,
+        host:'localhost',
+        open:true,
+        proxy:{
+
+        },
+        contentBase: './dist'
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename:'index.html',
+            template: 'index.html',
+            inject:true
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ]
 });
+
+module.exports = devWebpackConfig;

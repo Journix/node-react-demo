@@ -11,7 +11,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: 'bundle.js'
+        filename: '[name].[hash].js'
     },
     module: {
         rules: [{
@@ -28,9 +28,6 @@ module.exports = {
             test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
             loader: 'url-loader'
         }]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({ template: './public/index.html' })
-    ]
+    }
 };
 
