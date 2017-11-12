@@ -5,10 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base.conf');
 const merge = require('webpack-merge');
 
-// const config = {
-//     port: 8080,
-//     localhost: 'localhost'
-// }
 
 const devWebpackConfig = merge(baseWebpackConfig, {
     output: {
@@ -36,7 +32,5 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         new webpack.HotModuleReplacementPlugin()
     ]
 });
-
-console.log(devWebpackConfig);
 
 module.exports = devWebpackConfig;
