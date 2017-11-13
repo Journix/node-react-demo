@@ -6,9 +6,10 @@ let defaultSettings = require('./defaults');
 module.exports = {
   port: defaultSettings.port,
   debug: true,
-  devtool: 'eval',
+  // devtool: 'eval',
+  devtool: 'inline-source-map',
   output: {
-    path: path.join(__dirname, '/../build'),
+    path: path.resolve(__dirname, '../build'),
     filename: 'bundle.js',
     publicPath: defaultSettings.publicPath
   },
