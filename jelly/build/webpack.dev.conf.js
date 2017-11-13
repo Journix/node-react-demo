@@ -14,7 +14,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     },
     devtool: 'inline-source-map',
     devServer: {
-        hot: true,
         port:8080,
         host:'localhost',
         open:true,
