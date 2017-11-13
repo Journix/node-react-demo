@@ -2,6 +2,8 @@
 
 let path = require('path');
 let webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 let baseConfig = require('./base');
 
@@ -35,6 +37,11 @@ let config = Object.assign({}, baseConfig, {
     // new webpack.optimize.UglifyJsPlugin(),
     // new webpack.optimize.OccurenceOrderPlugin(),
     // new webpack.optimize.AggressiveMergingPlugin(),
+    new HtmlWebpackPlugin({
+        filename:'index.html',
+        template: 'src/assets/index-template.html',
+        inject:true
+    }),
     new webpack.NoErrorsPlugin()
   ],
   module: {

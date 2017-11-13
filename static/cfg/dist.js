@@ -4,6 +4,8 @@ let path = require('path');
 let webpack = require('webpack');
 
 let baseConfig = require('./base');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
@@ -35,6 +37,11 @@ let config = Object.assign({}, baseConfig, {
     // new webpack.optimize.UglifyJsPlugin(),
     // new webpack.optimize.OccurenceOrderPlugin(),
     // new webpack.optimize.AggressiveMergingPlugin(),
+    new HtmlWebpackPlugin({
+        filename:'index.html',
+        template: 'src/assets/index-template.html',
+        inject:true
+    }),
     new webpack.NoErrorsPlugin()
   ],
   module: {

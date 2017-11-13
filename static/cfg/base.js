@@ -13,8 +13,7 @@ module.exports = {
     contentBase: './build/',
     // historyApiFallback: true,   //"start": "webpack-dev-server --inline --content-base . --history-api-fallback"
     // hot: true,
-    port: 8000,
-    publicPath: '/build/'
+    port: 8000
   },
   // resolve: {
   //   extensions: ['', '.js', '.jsx'],

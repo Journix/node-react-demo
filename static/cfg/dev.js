@@ -3,6 +3,8 @@
 let path = require('path');
 let webpack = require('webpack');
 let baseConfig = require('./base');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 // Add needed plugins here
 // let BowerWebpackPlugin = require('bower-webpack-plugin');
@@ -16,6 +18,11 @@ let config = Object.assign({}, baseConfig, {
   cache: true,
   devtool: 'eval-source-map',
   plugins: [
+    new HtmlWebpackPlugin({
+        filename:'index.html',
+        template: 'src/assets/index-template.html',
+        inject:true
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     // new BowerWebpackPlugin({
