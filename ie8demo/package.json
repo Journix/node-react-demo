@@ -38,7 +38,7 @@
     "html-webpack-plugin": "^2.30.1"
   },
   "scripts": {
-    "start": "webpack --config webpack.dev.config.js",
+    "start": "webpack --config webpack.config.js",
     "build:render":"webpack --env=render",
     "build:local":"webpack --env=local",
     "dev": "webpack --watch --config webpack.config.js",
