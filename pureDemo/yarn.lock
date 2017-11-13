@@ -3802,6 +3802,10 @@ webpack-dev-server@^1.14.1:
     supports-color "^3.1.1"
     webpack-dev-middleware "^1.10.2"
 
+webpack-webstorm-debugger-script@*:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/webpack-webstorm-debugger-script/-/webpack-webstorm-debugger-script-1.0.1.tgz#55c81fb938fb1281dfd7d4365dfd2a353ea99b8a"
+
 webpack@^1.12.13:
   version "1.15.0"
   resolved "http://registry.npm.taobao.org/webpack/download/webpack-1.15.0.tgz#4ff31f53db03339e55164a9d468ee0324968fe98"

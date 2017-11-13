@@ -14,5 +14,6 @@ function buildConfig(env = 'dev') {
   let config = require(path.join(__dirname, 'cfg/' + env));
   return config;
 }
-
+console.log(env);
+console.log(JSON.stringify(buildConfig(env)));
 module.exports = buildConfig(env);

@@ -11,12 +11,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../build'),
     filename: 'bundle.js',
-    publicPath: defaultSettings.publicPath
+    // publicPath: defaultSettings.publicPath
   },
   devServer: {
     contentBase: './build/',
     port: defaultSettings.port,
-    publicPath: defaultSettings.publicPath
+    // publicPath: defaultSettings.publicPath,
+    publicPath: '/',
+    open:true
   },
   module: {
     'loaders': [{
