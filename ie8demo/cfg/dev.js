@@ -3,14 +3,13 @@
 let path = require('path');
 let webpack = require('webpack');
 let baseConfig = require('./base');
-let defaultSettings = require('./defaults');
 
 // Add needed plugins here
 // let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let config = Object.assign({}, baseConfig, {
   entry: [
-    'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
+    'webpack-dev-server/client?http://127.0.0.1:8000',
     // 'webpack/hot/only-dev-server',
     './src/index'
   ],
@@ -23,18 +22,35 @@ let config = Object.assign({}, baseConfig, {
     //   searchResolveModulesDirectories: false
     // })
   ],
-  module: defaultSettings.getDefaultModules()
+  module: {
+    loaders: [
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.scss/,
+        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+      },
+      {
+        test: /\.(png|jpg|gif|woff|woff2)$/,
+        loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.(mp4|ogg|svg)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        // include: [].concat(
+        //   config.additionalPaths,
+        //   [ path.join(__dirname, '../src') ]
+        // )
+      }
+    ]
+  }
 });
 
-// Add needed loaders to the defaults here
-config.module.loaders.push({
-  test: /\.(js|jsx)$/,
-  // loader: 'react-hot!babel-loader',
-  loader: 'babel-loader',
-  include: [].concat(
-    config.additionalPaths,
-    [ path.join(__dirname, '../src') ]
-  )
-});
 
 module.exports = config;
