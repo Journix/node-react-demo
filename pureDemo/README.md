@@ -60,10 +60,6 @@
 
 ### plugins
 - webpack.NoErrorsPlugin(): 跳过编译时出错的代码并记录，使编译后运行时的包不会发生错误
-- webpack.optimize.UglifyJsPlugin(): 压缩js
-    - compress : 压缩配置
-        - warnings: boolen 是否出现警告
-        - drop_console: boolen 是否去除 console 语句
 - extract-text-webpack-plugin: 把 css 从 bundle 中独立出来。
 
 ### externals

@@ -38,6 +38,7 @@
     "start": "webpack --config webpack.dev.config.js",
     "build:render":"webpack --env=render",
     "build:local":"webpack --env=local",
+    "webpackserver:start": "webpack-dev-server --config webpack.config.js",
     "dev": "webpack --watch --config webpack.config.js",
     "serve:local": "node server.js --env=local",
     "serve:dist": "node server.js --env=dist",
