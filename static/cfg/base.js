@@ -1,26 +1,21 @@
 'use strict';
 let path = require('path');
-let defaultSettings = require('./defaults');
-
-// Additional npm or bower modules to include in builds
-// let additionalPaths = [];
 
 module.exports = {
-  // additionalPaths: additionalPaths,
-  port: defaultSettings.port,
+  port: 8000,
   debug: true,
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../build'),
     filename: 'bundle.js',
-    publicPath: defaultSettings.publicPath
+    publicPath: '/build/'
   },
   devServer: {
     contentBase: './build/',
     // historyApiFallback: true,   //"start": "webpack-dev-server --inline --content-base . --history-api-fallback"
     // hot: true,
-    port: defaultSettings.port,
-    publicPath: defaultSettings.publicPath
+    port: 8000,
+    publicPath: '/build/'
   },
   // resolve: {
   //   extensions: ['', '.js', '.jsx'],
