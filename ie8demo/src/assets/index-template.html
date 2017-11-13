@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <% if (htmlWebpackPlugin.options.favicon) { %>
+    <link rel="shortcut icon" href="<%= htmlWebpackPlugin.options.favicon%>">
+    <% } %>
+      <% if (htmlWebpackPlugin.options.mobile) { %>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <% } %>
+
+          <% for (var css in htmlWebpackPlugin.options.css) { %>
+            <link href="<%= htmlWebpackPlugin.options.css[css] %>" rel="stylesheet">
+            <% } %>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
