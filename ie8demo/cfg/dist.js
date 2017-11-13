@@ -2,6 +2,8 @@
 
 let path = require('path');
 let webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
@@ -30,12 +32,17 @@ let config = Object.assign({}, baseConfig, {
   // },
   plugins: [
     // new webpack.optimize.DedupePlugin(),
-    // new webpack.DefinePlugin({
-    //   'process.env.NODE_ENV': '"production"'
-    // }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    }),
     // new BowerWebpackPlugin({
     //   searchResolveModulesDirectories: false
     // }),
+    new HtmlWebpackPlugin({
+        filename:'index.html',
+        template: 'src/assets/index-template.html',
+        // inject:true
+    }),
     // new webpack.optimize.UglifyJsPlugin(),
     // new webpack.optimize.OccurenceOrderPlugin(),
     // new webpack.optimize.AggressiveMergingPlugin(),
@@ -54,5 +61,7 @@ config.module.loaders.push({
   //   // [ path.join(__dirname, '/../src') ]
   // )
 });
+
+console.log(config);
 
 module.exports = config;

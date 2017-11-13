@@ -20,17 +20,7 @@ module.exports = {
     // historyApiFallback: true,   //"start": "webpack-dev-server --inline --content-base . --history-api-fallback"
     // hot: true,
     port: defaultSettings.port,
-    publicPath: defaultSettings.publicPath,
-    // noInfo: false,
-    // stats: 'errors-only',
-    // proxy: 'http://localhost:3333',
-    // proxy: {
-    //     '/api/**': {
-    //        target: 'http://localhost:3333',
-    //        changeOrigin: true,
-    //        secure: false
-    //     },
-    // }
+    publicPath: defaultSettings.publicPath
   },
   // resolve: {
   //   extensions: ['', '.js', '.jsx'],
@@ -44,7 +34,6 @@ module.exports = {
       'test': /\.js$/,
       'exclude': /node_modules/,
       'query': {
-        // 'plugins': ['recharts'],
         'presets': ['es2015']
       }
     }]
