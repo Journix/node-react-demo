@@ -18,7 +18,6 @@ import { createHashHistory } from 'history';
 // import { useRouters } from 'react-router/lib';
 // const appHistory = routerHistory(createHashHistory)({ queryKey: false }) ;
 // const appHistory = useRouters(createHashHistory)({ queryKey: false }) ;
-
 // import { HashRouter, Route, Link, Switch } from 'react-router-dom';
 import { Router, Route, Link, hashHistory} from 'react-router';
 
@@ -55,7 +54,7 @@ const About = () => (
 
 const Home = () => (
   <div>
-    <h3>Home</h3>
+    <h3>Home100</h3>
   </div>
 )
 
