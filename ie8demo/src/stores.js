@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 
 const _ = require('lodash');
 
-import createHistory from 'history/createBrowserHistory';
+import createHistory from 'history/lib/createBrowserHistory';
 const history = createHistory();
 
 import { composeWithDevTools } from 'redux-devtools-extension';

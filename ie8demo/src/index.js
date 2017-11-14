@@ -11,10 +11,15 @@ import registerServiceWorker from './registerServiceWorker';
 
 import store from './stores'
 
-import { HashRouter, Route, Link, Switch } from 'react-router-dom';
+// import { HashRouter, Route, Link, Switch } from 'react-router-dom';
+import { Router, Route, Link,hashHistory} from 'react-router';
 
 // 需要服务端做配置
 // import createHistory from 'history/createBrowserHistory';
+// const history = createHistory();
+
+
+// import createHistory from 'history/lib/createHashHistory';
 // const history = createHistory();
 
 
@@ -62,29 +67,32 @@ const Inbox = ({ match }) => (
   </div>
 )
 
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <HashRouter>
+//       <App>
+//           <Route exact path="/" component={Home} />
+//           <Route path="/about" component={About} />
+//           <Route path="/inbox" component={Inbox} />
+//       </App>
+//     </HashRouter>
+//   </Provider>,
+//   document.getElementById('root')
+// );
+
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <Router history={hashHistory}>
       <App>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/inbox" component={Inbox} />
       </App>
-    </HashRouter>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
 
-
-// ReactDOM.render(
-//     <Router history={history}>
-//       <div>
-//         <Route path="/" exact component={Index} />
-//         <Route exact path='aaa/:urlPathParams' component={App}/>
-//       </div>
-//     </Router>,
-//   document.getElementById('root')
-// );
 
 
 
