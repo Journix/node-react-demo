@@ -1,16 +1,16 @@
 'use strict';
 
-let path = require('path');
-let webpack = require('webpack');
-let baseConfig = require('./base');
+const path = require('path');
+const webpack = require('webpack');
+const baseConfig = require('./base');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-require('core-js/fn/object/assign');
+const merge = require('webpack-merge');
 
 
 // Add needed plugins here
 // let BowerWebpackPlugin = require('bower-webpack-plugin');
 
-let config = Object.assign({}, baseConfig, {
+let config = merge({}, baseConfig, {
   entry: [
     'webpack-dev-server/client?http://127.0.0.1:8000',
     // 'webpack/hot/only-dev-server',

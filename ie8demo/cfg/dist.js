@@ -1,14 +1,13 @@
 'use strict';
 
-let path = require('path');
-let webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-require('core-js/fn/object/assign');
-
+const merge = require('webpack-merge');
 
 let baseConfig = require('./base');
 
-let config = Object.assign({}, baseConfig, {
+let config = merge({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   // cache: false,
   devtool: 'sourcemap',

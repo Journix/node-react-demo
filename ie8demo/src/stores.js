@@ -1,6 +1,8 @@
- import { routerReducer, routerMiddleware } from 'react-router-redux';  //ConnectedRouter as Router,
+import { routerReducer, routerMiddleware } from 'react-router-redux';  //ConnectedRouter as Router,
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
+
+const _ = require('lodash');
 
 import createHistory from 'history/createBrowserHistory';
 const history = createHistory();
@@ -10,7 +12,7 @@ import createLogger from 'redux-logger'
 
 import rootReducers from './reducers';
 
-const reducers = combineReducers(Object.assign(rootReducers, { router: routerReducer })) ;
+const reducers = combineReducers(_.assign(rootReducers, { router: routerReducer })) ;
 //window.STATE_FROM_SERVER接收服务端初始状态
 // export default createStore(reducer, window.STATE_FROM_SERVER) //不使用中间件的情况
 
