@@ -10,7 +10,7 @@ const merge = require('webpack-merge');
 // Add needed plugins here
 // let BowerWebpackPlugin = require('bower-webpack-plugin');
 
-let config = merge({}, baseConfig, {
+let config = merge(baseConfig, {
   entry: [
     'webpack-dev-server/client?http://127.0.0.1:8000',
     // 'webpack/hot/only-dev-server',

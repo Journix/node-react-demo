@@ -7,7 +7,7 @@ const merge = require('webpack-merge');
 
 let baseConfig = require('./base');
 
-let config = merge({}, baseConfig, {
+let config = merge(baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   // cache: false,
   devtool: 'sourcemap',
