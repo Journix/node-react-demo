@@ -4,6 +4,7 @@ let path = require('path');
 let webpack = require('webpack');
 let baseConfig = require('./base');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+require('core-js/fn/object/assign');
 
 
 // Add needed plugins here

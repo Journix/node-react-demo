@@ -11,7 +11,8 @@
     "redux-thunk": "^2.1.0",
     "react-router-redux": "^4.0.8",
     "classnames": "^2.2.5",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "core-js": "^2.0.0"
   },
   "devDependencies": {
     "webpack": "^1.12.13",

@@ -3,6 +3,7 @@
 let path = require('path');
 let webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+require('core-js/fn/object/assign');
 
 
 let baseConfig = require('./base');
