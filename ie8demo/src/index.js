@@ -29,22 +29,21 @@ import { Router, Route, Link, hashHistory} from 'react-router';
 // const history = createHistory();
 
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <h1>App</h1>
-//         <ul>
-//           <li><Link to="/">Home</Link></li>
-//           <li><Link to="/about">About</Link></li>
-//           <li><Link to="/inbox">Inbox</Link></li>
-//         </ul>
-//         {this.props.children}
-
-//       </div>
-//     );
-//   }
-// }
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>App</h1>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/inbox">Inbox</Link></li>
+        </ul>
+        {this.props.children}
+      </div>
+    );
+  }
+}
 
 const About = () => (
   <div>
@@ -54,7 +53,7 @@ const About = () => (
 
 const Home = () => (
   <div>
-    <h3>Home100</h3>
+    <h3>Home10</h3>
   </div>
 )
 
@@ -86,6 +85,17 @@ const Inbox = ({ match }) => (
 //   document.getElementById('root')
 // );
 
+React.render((
+  <Provider store={store}>
+    <Router>
+      <Route path="/" component={App}>
+        <Route path="about" component={About} />
+        <Route path="inbox" component={Inbox} />
+      </Route>
+    </Router>
+  </Provider>
+), document.getElementById('root'))
+
 // ReactDOM.render(
 //   <Provider store={store}>
 //     <Router history={hashHistory}>
@@ -99,22 +109,6 @@ const Inbox = ({ match }) => (
 //   document.getElementById('root')
 // );
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router history={hashHistory}>
-        <h1>App</h1>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/inbox">Inbox</Link></li>
-        </ul>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/inbox" component={Inbox} />
-    </Router>
-  </Provider>,
-  document.getElementById('root')
-);
 
 
 
