@@ -11,10 +11,6 @@ import store from './stores'
 
 import { HashRouter, Route, Link, Switch } from 'react-router-dom';
 
-// 需要服务端做配置
-// import createHistory from 'history/createBrowserHistory';
-// const history = createHistory();
-
 
 class App extends Component {
   render() {
@@ -72,17 +68,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-
-// ReactDOM.render(
-//     <Router history={history}>
-//       <div>
-//         <Route path="/" exact component={Index} />
-//         <Route exact path='aaa/:urlPathParams' component={App}/>
-//       </div>
-//     </Router>,
-//   document.getElementById('root')
-// );
-
 
 
