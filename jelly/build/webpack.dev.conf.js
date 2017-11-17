@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base.conf');
 const merge = require('webpack-merge');
 
-
 const devWebpackConfig = merge(baseWebpackConfig, {
     output: {
         filename: '[name].[hash].js',
