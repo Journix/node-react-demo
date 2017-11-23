@@ -21,9 +21,9 @@ class App extends Component {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/inbox">Inbox</Link></li>
+          <li><Link to="/List">List</Link></li>
         </ul>
         {this.props.children}
-
       </div>
     );
   }
@@ -63,6 +63,7 @@ ReactDOM.render(
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/inbox" component={Inbox} />
+          <Route path="/list" component={List} />
       </App>
     </HashRouter>
   </Provider>,

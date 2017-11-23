@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './list.css';
+import Calendar from '../../components/calendar'
 
-class App extends Component {
+class List extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className="List">
+        <div className="List-header">
           <h2>list page</h2>
         </div>
-        <p>props {this.props.name}</p>
+        <Calendar/>
       </div>
     );
   }
 }
 
-export default App;
+export default List;

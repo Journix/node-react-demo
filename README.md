@@ -1,6 +1,3 @@
-## 目录结构
-
-
 ## package.json
 
 ### devDependencies
@@ -38,6 +35,12 @@
 - showErrors: true|false, 将错误输出到html页面中。
 - minify: {...}|false; 传递html-minifier 给 minify输出，false就是不使用html压缩。
 
+
+## node层
+
+### package.json
+- babel-cli: 命令行转码，自带babel-node，提供一个支持ES6的REPL环境。可以直接运行 es6 脚本。
+- babel-register: 改写 require 名字，require时，先进行 babel 转码。由于是实时转码，只适合在开发环境中使用。
 
 参考：
 - https://www.cnblogs.com/wonyun/p/6030090.html

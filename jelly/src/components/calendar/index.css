@@ -1,0 +1,35 @@
+/*日期区域css*/
+.date {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+.weekName {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+.CalendarHeader {
+    width: 210px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+

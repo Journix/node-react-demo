@@ -1,4 +1,4 @@
- import { routerReducer, routerMiddleware } from 'react-router-redux';  //ConnectedRouter as Router,
+import { routerReducer, routerMiddleware } from 'react-router-redux';  //ConnectedRouter as Router,
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 
