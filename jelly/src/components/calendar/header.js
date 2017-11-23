@@ -5,8 +5,6 @@ class Header extends Component {
     constructor() {
         super();
         this.state = {
-            calendarData: {
-            }
         }
     }
 
@@ -33,12 +31,12 @@ class Header extends Component {
 
     componentWillMount () {
       let _self = this;
-      console.log(111)
-      let nstr = new Date();
-      let ynow = nstr.getFullYear();
-      let mnow = nstr.getMonth();
-      let dnow = nstr.getDate();
-      let mnow_real = mnow;
+      let ynow = this.props.date.getFullYear();
+      let mnow = this.props.date.getMonth()+1;
+      this.setState({
+        ynow,
+        mnow
+      })
     }
 
     componentDidMount () {
@@ -53,7 +51,7 @@ class Header extends Component {
         return (
             <div className = "CalendarHeader" >
                 <span>&lt;</span>
-                <span>2017年11月</span>
+                <span>{this.state.ynow}年{this.state.mnow}月</span>
                 <span>&gt;</span>
             </div>
         );

@@ -10,7 +10,6 @@ class Calendar extends Component {
     constructor() {
         super();
         this.state = {
-
         }
     }
 
@@ -21,6 +20,12 @@ class Calendar extends Component {
       let ynow = nstr.getFullYear();
       let mnow = nstr.getMonth();
       let dnow = nstr.getDate();
+      _self.setState({
+        nstr,
+        ynow,
+        mnow,
+        dnow
+      })
     }
 
     componentDidMount () {
@@ -32,9 +37,9 @@ class Calendar extends Component {
     render() {
         return (
             <div className = "Calendar" >
-                <Header/>
+                <Header date={this.state.nstr} />
                 <Week/>
-                <DetailDate/>
+                <DetailDate date={this.state} />
             </div>
         );
     }
